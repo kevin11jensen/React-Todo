@@ -9,32 +9,32 @@ const tasks = [
   {
     name: 'Go for a jog',
     id: 123,
-    purchased: false
+    completed: false
   },
   {
     name: 'Make dinner',
     id: 124,
-    purchased: false
+    completed: false
   },
   {
     name: 'Go to grocery store',
     id: 1235,
-    purchased: false
+    completed: false
   },
   {
     name: 'Go to gym',
     id: 1246,
-    purchased: false
+    completed: false
   },
   {
     name: 'Return Emails',
     id: 1237,
-    purchased: false
+    completed: false
   },
   {
     name: 'Walk cat',
     id: 1248,
-    purchased: false
+    completed: false
   }
 ];
 
@@ -72,7 +72,7 @@ class App extends React.Component {
         // toggle purchased
         return {
           ...item,
-          purchased: !item.purchased
+          completed: !item.completed
         };
       } else {
         return item;
@@ -89,7 +89,7 @@ class App extends React.Component {
     const newItem = {
       name: itemText,
       id: Date.now(),
-      purchased: false
+      completed: false
     };
     this.setState({
       tasksList: [...this.state.tasksList, newItem]

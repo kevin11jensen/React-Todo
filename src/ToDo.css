@@ -56,10 +56,10 @@ h1 {
   padding-left: 8px;
   cursor: pointer;
   border-radius: .5rem;
-  border: 2px solid blue;
+  border: 2px solid dodgerblue;
 }
 
-.item.purchased {
+.item.completed{
   background-color: #2c03e4;
   text-decoration: line-through;
 }
