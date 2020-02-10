@@ -67,9 +67,9 @@ class App extends React.Component {
     const newTasksList = this.state.tasksList.map(item => {
       // loop through the array
       // find the item we clicked (id, maybe index)
-      // toggle that item's purchased property
+      // toggle that item's completed property
       if (item.id === clickedId) {
-        // toggle purchased
+        // toggle completed
         return {
           ...item,
           completed: !item.completed
