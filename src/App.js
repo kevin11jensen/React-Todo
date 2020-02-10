@@ -64,7 +64,7 @@ class App extends React.Component {
   toggleItem = clickedId => {
     // no mutating the current state
     // for every array and every object - create a new one (..., or array methods)
-    const newGroceryList = this.state.tasksList.map(item => {
+    const newTasksList = this.state.tasksList.map(item => {
       // loop through the array
       // find the item we clicked (id, maybe index)
       // toggle that item's purchased property
@@ -81,7 +81,7 @@ class App extends React.Component {
 
     // Update state with the new array
     this.setState({
-      tasksList: newGroceryList
+      tasksList: newTasksList
     });
   };
 
