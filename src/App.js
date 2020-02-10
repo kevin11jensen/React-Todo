@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import GroceryList from './components/TodoComponents/GroceryList';
+import TasksList from './components/TodoComponents/TasksList';
 import ListForm from './components/TodoComponents/ListForm';
 import './ToDo.css';
 
@@ -104,8 +104,8 @@ class App extends React.Component {
           <h1>ToDo List</h1>
           <ListForm addNewItem={this.addNewItem} />
         </div>
-        <GroceryList
-          groceries={this.state.tasksList}
+        <TasksList
+          tasks={this.state.tasksList}
           toggleItem={this.toggleItem}
         />
       </div>

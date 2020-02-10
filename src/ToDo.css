@@ -41,7 +41,7 @@ h1 {
   text-align: left;
 }
 
-.shopping-list {
+.tasks-list {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
