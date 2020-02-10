@@ -7,32 +7,32 @@ import './ToDo.css';
 
 const tasks = [
   {
-    name: 'Go for a jog',
+    task: 'Go for a jog',
     id: 123,
     completed: false
   },
   {
-    name: 'Make dinner',
+    task: 'Make dinner',
     id: 124,
     completed: false
   },
   {
-    name: 'Go to grocery store',
+    task: 'Go to grocery store',
     id: 1235,
     completed: false
   },
   {
-    name: 'Go to gym',
+    task: 'Go to gym',
     id: 1246,
     completed: false
   },
   {
-    name: 'Return Emails',
+    task: 'Return Emails',
     id: 1237,
     completed: false
   },
   {
-    name: 'Walk cat',
+    task: 'Walk cat',
     id: 1248,
     completed: false
   }
@@ -87,7 +87,7 @@ class App extends React.Component {
 
   addNewItem = itemText => {
     const newItem = {
-      name: itemText,
+      task: itemText,
       id: Date.now(),
       completed: false
     };
