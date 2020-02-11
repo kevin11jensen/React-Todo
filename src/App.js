@@ -39,37 +39,21 @@ const tasks = [
 ];
 
 class App extends React.Component {
-  // Constructor with state
-
-  // What we inherit from React.Component
-  // this.state
-  // this.setState
-  // lifecycle methods
+  
   constructor() {
     super();
     this.state = {
       tasksList: tasks
     };
 
-    // we don't need this if we use arrow functions 🎉
-    // this.toggleItem = this.toggleItem.bind(this);
   }
 
-  // const [someData, setSomeData] = useState('')
-  // const [moreData, setSomeData] = useState([])
-
-  // THE `this` KEYWORD 👻
-
-  // Class methods to update state
   toggleItem = clickedId => {
-    // no mutating the current state
-    // for every array and every object - create a new one (..., or array methods)
+    
     const newTasksList = this.state.tasksList.map(item => {
-      // loop through the array
-      // find the item we clicked (id, maybe index)
-      // toggle that item's completed property
+     
       if (item.id === clickedId) {
-        // toggle completed
+        
         return {
           ...item,
           completed: !item.completed
@@ -79,7 +63,7 @@ class App extends React.Component {
       }
     });
 
-    // Update state with the new array
+    
     this.setState({
       tasksList: newTasksList
     });
@@ -95,6 +79,11 @@ class App extends React.Component {
       tasksList: [...this.state.tasksList, newItem]
     });
   };
+
+  
+          
+        
+
 
   render() {
     console.log('rendering...');

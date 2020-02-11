@@ -5,10 +5,12 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  
 }
 
 body {
   background-color: #2d2d37;
+  font-size: 62.5%
 }
 
 h1,
@@ -27,8 +29,8 @@ span {
 .App {
   font-family: sans-serif;
   text-align: center;
-  padding: 0 36px;
-  max-width: 665px;
+  padding: 0 3.6rem;
+  max-width: 66.5rem;
   margin: 0 auto;
 }
 
@@ -52,11 +54,12 @@ h1 {
   background-color: #050047c7;
   width: 45%;
   text-align: left;
-  margin: 4px 0;
-  padding-left: 8px;
+  margin: .4rem 0;
+  padding-left: .8rem;
   cursor: pointer;
   border-radius: .5rem;
   border: 2px solid dodgerblue;
+  font-size: 1.6rem;
 }
 
 .item.completed{
@@ -71,21 +74,23 @@ form {
 form > input {
   background-color: #2d2d37;
   border: 0;
-  padding: 6px 0;
-  font-size: 1rem;
-  width: 240px;
+  padding: .6rem 0;
+  font-size: 1.6rem;
+  width: 24rem;
   outline: 0;
   color: white;
-  border-bottom: 1px solid #1a0fac;
-  margin-right: 8px;
+  border-bottom: .6rem solid #1a0fac;
+  border-radius: .5rem;
+  margin-right: .8rem;
 }
 
 button {
   background-color: #1a0fac;
   border: 1px solid #1a0fac;
   color: white;
-  font-size: 16px;
-  padding: 6px 14px;
+  font-size: 1.6rem;
+  padding: .6rem 1.4rem;
+  border-radius: .5rem;
 }
 
 input::placeholder {
@@ -94,5 +99,5 @@ input::placeholder {
 }
 
 .clear-btn {
-  margin-top: 16px;
+  margin-top: 1.6%;
 }

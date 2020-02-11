@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class ListForm extends Component {
-  // Constructor with state
   constructor() {
     super();
     this.state = {
@@ -10,14 +9,11 @@ class ListForm extends Component {
   }
 
   handleChanges = e => {
-    // update state with each keystroke
     this.setState({
-      // [e.target.name]: e.target.value
       newItem: e.target.value
     });
 
     class ListForm extends Component {
-      // Constructor with state
       constructor() {
         super();
         this.state = {
@@ -26,14 +22,11 @@ class ListForm extends Component {
       }
     
       handleChanges = e => {
-        // update state with each keystroke
         this.setState({
-          // [e.target.name]: e.target.value
           newItem: e.target.value
         });
       };
     
-      // class property to submit form
       handleSubmit = e => {
         e.preventDefault();
         this.props.addNewItem(this.state.newItem);
@@ -61,7 +54,6 @@ class ListForm extends Component {
     
   };
 
-  // class property to submit form
   handleSubmit = e => {
     e.preventDefault();
     this.props.addNewItem(this.state.newItem);
