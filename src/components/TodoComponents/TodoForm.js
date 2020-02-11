@@ -21,6 +21,7 @@ export default class TodoForm extends React.Component {
   render() {
     return (
       <StyledInput 
+        name='text'
         value={this.state.text} 
         onChange={this.handleChange} 
         placeholder='todo...' 
