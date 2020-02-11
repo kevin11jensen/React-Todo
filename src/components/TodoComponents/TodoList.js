@@ -21,8 +21,10 @@ export default class TodoList extends React.Component {
     return (
       <div>
         <TodoForm onSubmit={this.addTodo} />
-        {JSON.stringify(this.state.todos)}
+        {this.state.todos.map(todo => (<div key={todo.id}>{todo.text}</div>))}
       </div>
     )
   }
 }
+
+//the reason you only see the text is because we map through the todos and for each todo we create a new div and that div only contains the id which is date.now() and the input text
