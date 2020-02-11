@@ -80,7 +80,11 @@ class App extends React.Component {
     });
   };
 
-  
+  clearCompleted = e => {
+    e.preventDefault();
+    let tasks = this.state.tasks.filter(Item => !Item.completed);
+    this.setState({ tasks });
+  };
           
         
 
@@ -96,6 +100,7 @@ class App extends React.Component {
         <TasksList
           tasks={this.state.tasksList}
           toggleItem={this.toggleItem}
+          clearCompleted = {this.clearCompleted}
         />
       </div>
     );
