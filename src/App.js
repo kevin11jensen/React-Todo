@@ -5,7 +5,7 @@ import TasksList from './components/TodoComponents/TasksList';
 import ListForm from './components/TodoComponents/ListForm';
 import './ToDo.css';
 
-const tasks = [
+const todos = [
   {
     task: 'Go for a jog',
     id: 123,
