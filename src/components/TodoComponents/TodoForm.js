@@ -1,80 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 
-class ListForm extends Component {
-  constructor() {
-    super();
-    this.state = {
-      newItem: ''
-    };
+const StyledInput = styled.input`
+  width: 99%;
+  height: 15vh;
+  font-size: 3rem;
+`
+export default class TodoForm extends React.Component {
+
+  state = {
+    text: '' //store the text the user typed here
   }
 
-  handleChanges = e => {
+  handleChange = () => {
     this.setState({
-      newItem: e.target.value
-    });
-
-    class ListForm extends Component {
-      constructor() {
-        super();
-        this.state = {
-          newItem: ''
-        };
-      }
-    
-      handleChanges = e => {
-        this.setState({
-          newItem: e.target.value
-        });
-      };
-    
-      handleSubmit = e => {
-        e.preventDefault();
-        this.props.addNewItem(this.state.newItem);
-        this.setState({ newItem: '' });
-      };
-    
-      render() {
-        console.log('rendering form');
-        return (
-          <form onSubmit={this.handleSubmit}>
-            {/* This is an uncontrolled component 😬 We want it to be controlled by state */}
-            <input
-              type="text"
-              name="newItem"
-              value={this.state.newItem}
-              onChange={this.handleChanges}
-            />
-            <button>Add Task</button>
-          </form>
-        );
-      }
-    }
-    
-    
-    
-  };
-
-  handleSubmit = e => {
-    e.preventDefault();
-    this.props.addNewItem(this.state.newItem);
-    this.setState({ newItem: '' });
-  };
+      [event.target.name]: event.target.value
+    })
+  }
 
   render() {
-    console.log('rendering form');
     return (
-      <form onSubmit={this.handleSubmit}>
-        {/* This is an uncontrolled component 😬 We want it to be controlled by state */}
-        <input
-          type="text"
-          name="newItem"
-          value={this.state.newItem}
-          onChange={this.handleChanges}
-        />
-        <button>Add Task</button>
-      </form>
+      <StyledInput 
+        value={this.state.text} 
+        onChange={this.handleChange} 
+        placeholder='todo...' 
+      />
     );
   }
 }
-
-export default ListForm;
