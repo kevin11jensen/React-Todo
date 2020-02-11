@@ -25,7 +25,7 @@ export default class TodoForm extends React.Component {
           text: this.state.text,
           complete: false
       });
-      this.setState({
+      this.setState({  //empties the text input field after submit
         text: ''
       });
     };
