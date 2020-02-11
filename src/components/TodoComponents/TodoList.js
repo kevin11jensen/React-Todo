@@ -46,7 +46,7 @@ export default class TodoList extends React.Component {
             key={todo.id} 
             toggleComplete={() => this.toggleComplete(todo.id)} 
             
-            text={todo.text} 
+            todo={todo} 
           />
           ))}
       </div>
