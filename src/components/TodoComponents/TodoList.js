@@ -49,6 +49,7 @@ export default class TodoList extends React.Component {
             todo={todo} 
           />
           ))}
+          <div>tasks remaining: {this.state.todos.filter(todo => !todo.complete).length}</div>
       </div>
     )
   }
